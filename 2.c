@@ -1,15 +1,22 @@
 #include<stdio.h>
+void fibonacci(int n)
+{
+	int a=0,b=1,c,i;
+	printf("\nFibonacci Series:");
+	for(i=1;i<=n;i++)
+	{
+		printf("%d\n",a);
+		c=a+b;
+		a=b;
+		b=c;
+	}
+}
 
 int main()
 {
-   int n;
-
-   printf("Enter a no= ");
-   scanf("%d",&n);
-
-   if( n%2 == 0)
-   { printf("Even");
-   }
-   else
-   { printf("Odd"); }
+	int n;
+	printf("\nEnter the Number of Term:");
+	scanf("%d",&n);
+	fibonacci(n);
+	return 0;
 }
