@@ -1,21 +1,46 @@
 #include<stdio.h>
+#include<stdlib.h>
+int prime(int n);
 
 int main()
 {
-      int a,b,c;
-      printf("Enter 3 no.s = ");
-      scanf("%d%d%d",&a,&b,&c);
+      int a,b;
+      int i;
 
-      if(a>b)
-      { if(a>c)
-      {printf("a is greater " , a);}
-      else
-      {printf("c is greater " , c);} }
-      else
-      { if(b>c)
-      {printf("b is greater " , b);}
-      else
-      {printf("c is greater " , c);} }
+    printf("Enter range:");
+    scanf("%d %d",&a,&b);
 
-      
+    printf("Prime numbers are=");
+
+    for(i=a;i<=b;i++)
+    {
+        if(prime(i))
+        {
+            printf(" %d",i);
+        }
+    }
+    return 0;
 }
+
+int prime(int n)
+{
+       int i;
+       if(n<=1)
+       {
+          return 0;
+       }
+       else
+       {
+          for(i=2;i<=n/2;i++)
+          {
+              if(n%i==0)
+              {
+                  return 0;
+              }
+              else{
+              return 1;
+              }
+}
+
+
+}}
